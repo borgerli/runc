@@ -84,7 +84,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: "Cache ~/.vagrant.d/boxes, using hash of Vagrantfile.fedora34"
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.vagrant.d/boxes
           key: vagrant-${{ hashFiles('Vagrantfile.fedora34') }}
@@ -126,7 +126,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: "Cache ~/.vagrant.d/boxes, using hash of Vagrantfile.centos7"
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.vagrant.d/boxes
           key: vagrant-${{ hashFiles('Vagrantfile.centos7') }}
