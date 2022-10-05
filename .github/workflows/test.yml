@@ -27,7 +27,7 @@ jobs:
     steps:
 
     - name: checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3.1.0
 
     - name: install deps
       run: |
@@ -81,7 +81,7 @@ jobs:
     # only run it if others have passed
     needs: [test]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3.1.0
 
       - name: "Cache ~/.vagrant.d/boxes, using hash of Vagrantfile.fedora34"
         uses: actions/cache@v2
@@ -123,7 +123,7 @@ jobs:
     # only run it if others have passed
     needs: [test]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3.1.0
 
       - name: "Cache ~/.vagrant.d/boxes, using hash of Vagrantfile.centos7"
         uses: actions/cache@v2
@@ -163,7 +163,7 @@ jobs:
     steps:
 
     - name: checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3.1.0
 
     - name: install deps
       run: |
